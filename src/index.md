@@ -1,10 +1,10 @@
 ---
-# Page settings
 title: Aviral Chawla's Portfolio
 toc: false
 ---
 
 <div class="hero">
+  <img src="/profile.png" alt="Aviral Chawla's Profile Picture" class="profile-picture">
   <h1>Hi, I'm Aviral Chawla <span class="wave">👋</span></h1>
   <p class="tagline">
     I am a Ph.D. Candidate at the <a href='https://vermontcomplexsystems.org/'>Vermont Complex Systems Institute</a>  My research broadly focuses on statistical methods applied to natural language. 
@@ -24,6 +24,16 @@ toc: false
   max-width: 680px; 
   margin: 0 auto 2rem; /* Centers the hero section in the main column */
 }
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--theme-foreground);
+    margin-bottom: 1.5rem;
+}
+
 
 .hero h1 {
   font-size: 2.5rem;
