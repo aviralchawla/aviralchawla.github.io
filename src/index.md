@@ -17,7 +17,7 @@ toc: false
 
 <h2>Research Interests</h2>
 <div class="content">
-    <p>bayesian statistics, network analysis, machine learning, mechanistic interpretability</p>
+    <p>natural language processing, computational ethics, bayesian statistics, network analysis, machine learning, mechanistic interpretability</p>
 </div>
 
 <style>
