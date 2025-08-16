@@ -1,111 +1,189 @@
 ---
+# Page settings
+title: Aviral Chawla's Portfolio
 toc: false
 ---
 
 <div class="hero">
-  <h1>Aviral Chawla</h1>
-  <h2>Welcome to your new app! Edit&nbsp;<code style="font-size: 90%;">src/index.md</code> to change this page.</h2>
-  <a href="https://observablehq.com/framework/getting-started">Get started<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
-</div>
-
-<div class="grid grid-cols-2" style="grid-auto-rows: 504px;">
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "Your awesomeness over time 🚀",
-      subtitle: "Up and to the right!",
-      width,
-      y: {grid: true, label: "Awesomeness"},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(aapl, {x: "Date", y: "Close", tip: true})
-      ]
-    }))
-  }</div>
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "How big are penguins, anyway? 🐧",
-      width,
-      grid: true,
-      x: {label: "Body mass (g)"},
-      y: {label: "Flipper length (mm)"},
-      color: {legend: true},
-      marks: [
-        Plot.linearRegressionY(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species"}),
-        Plot.dot(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species", tip: true})
-      ]
-    }))
-  }</div>
-</div>
-
----
-
-## Next steps
-
-Here are some ideas of things you could try…
-
-<div class="grid grid-cols-4">
-  <div class="card">
-    Chart your own data using <a href="https://observablehq.com/framework/lib/plot"><code>Plot</code></a> and <a href="https://observablehq.com/framework/files"><code>FileAttachment</code></a>. Make it responsive using <a href="https://observablehq.com/framework/javascript#resize(render)"><code>resize</code></a>.
-  </div>
-  <div class="card">
-    Create a <a href="https://observablehq.com/framework/project-structure">new page</a> by adding a Markdown file (<code>whatever.md</code>) to the <code>src</code> folder.
-  </div>
-  <div class="card">
-    Add a drop-down menu using <a href="https://observablehq.com/framework/inputs/select"><code>Inputs.select</code></a> and use it to filter the data shown in a chart.
-  </div>
-  <div class="card">
-    Write a <a href="https://observablehq.com/framework/loaders">data loader</a> that queries a local database or API, generating a data snapshot on build.
-  </div>
-  <div class="card">
-    Import a <a href="https://observablehq.com/framework/imports">recommended library</a> from npm, such as <a href="https://observablehq.com/framework/lib/leaflet">Leaflet</a>, <a href="https://observablehq.com/framework/lib/dot">GraphViz</a>, <a href="https://observablehq.com/framework/lib/tex">TeX</a>, or <a href="https://observablehq.com/framework/lib/duckdb">DuckDB</a>.
-  </div>
-  <div class="card">
-    Ask for help, or share your work or ideas, on our <a href="https://github.com/observablehq/framework/discussions">GitHub discussions</a>.
-  </div>
-  <div class="card">
-    Visit <a href="https://github.com/observablehq/framework">Framework on GitHub</a> and give us a star. Or file an issue if you’ve found a bug!
+  <h1>Hi, I'm Aviral Chawla <span class="wave">👋</span></h1>
+  <p class="tagline">
+    I am a Ph.D. Candidate at the <a href='https://vermontcomplexsystems.org/'>Vermont Complex Systems Institute</a>  My research broadly focuses on statistical methods applied to natural language. 
+  </p>
+  <div class="social-links">
+    <a href="https://github.com/aviralchawla" target="_blank" rel="noopener noreferrer">GitHub</a>
+    achawla1 (at) uvm (dot) edu
   </div>
 </div>
+
+<h2>Featured Projects</h2>
+
+<div class="post-list">
+  <div class="card post-item">
+    <a href="/projects/project-one">
+      <h3>Analysis of Global Climate Trends</h3>
+      <p class="date">Aug 12, 2025</p>
+      <p>An interactive data visualization exploring decades of climate data using Observable Plot and DuckDB.</p>
+    </a>
+  </div>
+  <div class="card post-item">
+    <a href="/projects/project-two">
+      <h3>Real-time Stock Market Dashboard</h3>
+      <p class="date">Jul 28, 2025</p>
+      <p>A live dashboard built with Framework's data loaders to track and visualize stock market fluctuations.</p>
+    </a>
+  </div>
+  <div class="card post-item">
+    <a href="/projects/project-three">
+      <h3>Predictive Modeling for Customer Churn</h3>
+      <p class="date">Jun 15, 2025</p>
+      <p>A detailed walkthrough of a machine learning project, from data cleaning to model deployment, with explanatory charts.</p>
+    </a>
+  </div>
+</div>
+
+<div class="see-all">
+  <a href="/projects">See all projects →</a>
+</div>
+
 
 <style>
+/* Global Styles */
+footer {
+    display: none;
+}
 
+/* Hero Section */
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--sans-serif);
-  margin: 4rem 0 8rem;
-  text-wrap: balance;
-  text-align: center;
+  padding: 4rem 0;
+  text-align: left;
+  max-width: 680px; /* Limits width for better readability on large screens */
+  margin: 0 auto 2rem; /* Centers the hero section in the main column */
 }
 
 .hero h1 {
-  margin: 1rem 0;
-  padding: 1rem 0;
-  max-width: none;
-  font-size: 14vw;
-  font-weight: 900;
-  line-height: 1;
-  background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 2.5rem; /* 40px */
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--theme-foreground);
 }
 
-.hero h2 {
-  margin: 0;
-  max-width: 34em;
-  font-size: 20px;
-  font-style: initial;
-  font-weight: 500;
-  line-height: 1.5;
+.hero .tagline {
+  font-size: 1.125rem; /* 18px */
   color: var(--theme-foreground-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-@media (min-width: 640px) {
-  .hero h1 {
-    font-size: 90px;
-  }
+/* Waving hand animation */
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--theme-foreground);
+  transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: var(--theme-accent-hover);
+  text-decoration: underline;
+}
+
+/* Section Heading for Projects */
+h2 {
+  max-width: 680px;
+  margin: 4rem auto 1rem;
+  border-bottom: 1px solid var(--theme-foreground-faintest);
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Project List Container */
+.post-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Individual Project Card Styling */
+.post-item.card {
+  background-color: transparent; /* Remove default card background */
+  border: 1px solid var(--theme-foreground-faintest);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: none; /* Remove default card shadow */
+}
+
+.post-item.card:hover {
+  border-color: var(--theme-accent-hover);
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.post-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the entire card clickable */
+}
+
+.post-item h3 {
+  margin: 0 0 0.5rem;
+  color: var(--theme-foreground);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.post-item p {
+  margin: 0;
+  color: var(--theme-foreground-muted);
+  line-height: 1.6;
+}
+
+.post-item .date {
+  font-size: 0.875rem; /* 14px */
+  color: var(--theme-foreground-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* "See All" Link */
+.see-all {
+  max-width: 680px;
+  margin: 1.5rem auto;
+  text-align: right;
+}
+
+.see-all a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--theme-accent);
+}
+
+.see-all a:hover {
+  text-decoration: underline;
 }
 
 </style>
