@@ -15,11 +15,16 @@ toc: false
   </div>
 </div>
 
+<h2>Research Interests</h2>
+<div class="content">
+    <p>bayesian statistics, network analysis, machine learning, mechanistic interpretability</p>
+</div>
+
 <style>
 
 /* Hero Section */
 .hero {
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: left;
   max-width: 680px; 
   margin: 0 auto 2rem; /* Centers the hero section in the main column */
@@ -30,13 +35,14 @@ toc: false
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--theme-foreground);
-    margin-bottom: 1.5rem;
+    border: 2px solid var(--theme-foreground);
+    margin-bottom: 1.3rem;
+    flex-shrink: 0;
 }
 
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
   color: var(--theme-foreground);
@@ -95,6 +101,23 @@ h2 {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 680px;
+    margin: 0 auto;
+    gap: 1rem;
+    }
+
+@media (max-width: 640px) {
+    .hero {
+        flex-direction: column;
+        }
+
+    .hero-text {
+        text-align: center;
+        }
 
 
 </style>
