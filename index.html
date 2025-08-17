@@ -39,7 +39,7 @@ import "./_observablehq/client.12f1afc8.js";
   <div class="hero-text">
     <h1>Hi, I'm Aviral Chawla <span class="wave">👋</span></h1>
     <p class="tagline">
-      I am a Ph.D. Candidate at the <a href="https://vermontcomplexsystems.org/" target="_blank" rel="noopener noreferrer">Vermont Complex Systems Institute</a>. My research broadly focuses on statistical methods applied to natural language. 
+      I am a Ph.D. Candidate at the <a href="https://vermontcomplexsystems.org/" target="_blank" rel="noopener noreferrer">Vermont Complex Systems Institute</a>. My research broadly focuses on statistical methods applied to text corpora. Prior to my Ph.D., I studied Western Classics at <a href="https://www.sjc.edu/" target="_blank" rel="noopener noreferrer">St. John's College (Santa Fe)</a> and briefly worked as a data scientist in the industry.
     </p>
     <div class="social-links">
       <a href="https://github.com/aviralchawla" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -52,6 +52,34 @@ import "./_observablehq/client.12f1afc8.js";
 <h2>Research Interests</h2>
 <div class="content">
     <p>natural language processing, computational ethics, bayesian statistics, network analysis, machine learning, mechanistic interpretability</p>
+</div>
+<h2>News</h2>
+<div class="content">
+<p><strong>Summer 2025: </strong> Presented my work at ICSSI 2025 in Copenhagen.</p>
+</div>
+<h2>Projects</h2>
+<div class="post-list">
+  <div class="card post-item">
+    <a href="./projects/project-one">
+      <h3>Analysis of Global Climate Trends</h3>
+      <p class="date">Aug 12, 2025</p>
+      <p>An interactive data visualization exploring decades of climate data using Observable Plot and DuckDB.</p>
+    </a>
+  </div>
+  <div class="card post-item">
+    <a href="./projects/project-two">
+      <h3>Real-time Stock Market Dashboard</h3>
+      <p class="date">Jul 28, 2025</p>
+      <p>A live dashboard built with Framework's data loaders to track and visualize stock market fluctuations.</p>
+    </a>
+  </div>
+  <div class="card post-item">
+    <a href="./projects/project-three">
+      <h3>Predictive Modeling for Customer Churn</h3>
+      <p class="date">Jun 15, 2025</p>
+      <p>A detailed walkthrough of a machine learning project, from data cleaning to model deployment, with explanatory charts.</p>
+    </a>
+  </div>
 </div>
 <style>
 
@@ -147,6 +175,52 @@ h2 {
     flex-direction: column;
     max-width: 680px;
     margin: 0 auto;
+}
+
+/* Project List Container */
+.post-list { 
+  display: grid;
+  gap: 1rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Individual Project Card Styling */
+.post-item.card {
+  background-color: transparent; /* Remove default card background */
+  border: 1px solid var(--theme-foreground-faintest);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  margin-bottom: 0rem;
+}
+
+.post-item.card:hover {
+  border-color: var(--theme-accent-hover);
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.post-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the entire card clickable */
+}
+
+.post-item h3 {
+  color: var(--theme-foreground);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.post-item p {
+  margin: 0;
+  color: var(--theme-foreground-muted);
+  line-height: 1.6;
+}
+
+.post-item .date {
+  font-size: 0.875rem; /* 14px */
+  color: var(--theme-foreground-muted);
 }
 
 @media (max-width: 640px) {
