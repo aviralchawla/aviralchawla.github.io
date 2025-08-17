@@ -4,15 +4,18 @@ toc: false
 ---
 
 <div class="hero">
-  <img src="/profile.png" alt="Aviral Chawla's Profile Picture" class="profile-picture">
-  <h1>Hi, I'm Aviral Chawla <span class="wave">👋</span></h1>
-  <p class="tagline">
-    I am a Ph.D. Candidate at the <a href='https://vermontcomplexsystems.org/'>Vermont Complex Systems Institute</a>  My research broadly focuses on statistical methods applied to natural language. 
-  </p>
-  <div class="social-links">
-    <a href="https://github.com/aviralchawla" target="_blank" rel="noopener noreferrer">GitHub</a>
-    achawla1 (at) uvm (dot) edu
+  <div class="hero-text">
+    <h1>Hi, I'm Aviral Chawla <span class="wave">👋</span></h1>
+    <p class="tagline">
+      I am a Ph.D. Candidate at the <a href='https://vermontcomplexsystems.org/'>Vermont Complex Systems Institute</a>. My research broadly focuses on statistical methods applied to natural language. 
+    </p>
+    <div class="social-links">
+      <a href="https://github.com/aviralchawla" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="/data/CV-Chawla.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      achawla1 (at) uvm (dot) edu
+    </div>
   </div>
+  <img src="/photos/profile.png" alt="Aviral Chawla's Profile Picture" class="profile-picture" onerror="this.onerror=null;this.src='https://placehold.co/140x140/333/FFF?text=AC';">
 </div>
 
 <h2>Research Interests</h2>
@@ -24,10 +27,17 @@ toc: false
 
 /* Hero Section */
 .hero {
-  padding: 2rem 0;
-  text-align: left;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 2rem; 
+  padding: 2rem 0rem 1rem 0rem;
   max-width: 680px; 
-  margin: 0 auto 2rem; /* Centers the hero section in the main column */
+  margin: 0 auto 2rem; 
+}
+
+.hero-text {
+  flex-grow: 1; 
 }
 
 .profile-picture {
@@ -35,9 +45,8 @@ toc: false
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--theme-foreground);
-    margin-bottom: 1.3rem;
-    flex-shrink: 0;
+    border: 2px solid var(--theme-foreground, #333);
+    flex-shrink: 0; /* Prevents the image from shrinking */
 }
 
 
@@ -45,14 +54,13 @@ toc: false
   font-size: 2.3rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  color: var(--theme-foreground);
+  color: var(--theme-foreground, #000);
 }
 
 .hero .tagline {
   font-size: 1.125rem;
-  color: var(--theme-foreground-muted);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  color: var(--theme-foreground-muted, #555);
+  line-height: 1.3;
 }
 
 /* Waving hand animation */
@@ -76,27 +84,29 @@ toc: false
 /* Social Links */
 .social-links {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
   margin-top: 1rem;
+  color: var(--theme-foreground-muted, #555);
 }
 
 .social-links a {
   text-decoration: none;
   font-weight: 500;
-  color: var(--theme-foreground);
+  color: var(--theme-foreground, #000);
   transition: color 0.2s ease-in-out;
 }
 
 .social-links a:hover {
-  color: var(--theme-accent-hover);
+  color: var(--theme-accent-hover, #007bff);
   text-decoration: underline;
 }
 
-/* Section Heading for Projects */
+/* Section Heading */
 h2 {
   max-width: 680px;
-  margin: 4rem auto 1rem;
-  border-bottom: 1px solid var(--theme-foreground-faintest);
+  margin: 2rem auto 0rem;
+  border-bottom: 1px solid var(--theme-foreground-faintest, #eee);
   padding-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -107,17 +117,21 @@ h2 {
     flex-direction: column;
     max-width: 680px;
     margin: 0 auto;
-    gap: 1rem;
-    }
+}
 
 @media (max-width: 640px) {
     .hero {
-        flex-direction: column;
-        }
-
-    .hero-text {
+        flex-direction: column-reverse; 
         text-align: center;
-        }
+    }
+    
+    .social-links {
+      justify-content: center; /* Center social links on mobile */
+    }
 
+    .profile-picture {
+      margin-bottom: 1.5rem; /* Add some space below the picture on mobile */
+    }
+}
 
 </style>
