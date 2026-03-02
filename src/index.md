@@ -32,16 +32,15 @@ toc: false
 <h2>Projects</h2>
 <div class="project-list">
 
-  <div class="card project-item">
+  <a href="/projects/neighbor-hop" class="card project-item project-item--link">
     <h3>Network-Aware Influence Maximization</h3>
     <p class="project-description">
       How do you figure out who will cause the largest contagion outbreak? The problem of Influence Maximization is finding the top <i>k</i> nodes, such that when seeded with a contagion, will cause the largest outbreak. I developed an evolutionary algorithm that exploits the network structure to find candidates. The resulting algorithm consistently outperformed standard greedy baselines in both speed and solution quality across multiple network types.
     </p>
     <div class="tags">
-      <a href="https://doi.org/10.1145/3583133.3590755" target="_blank" rel="noopener noreferrer" class="tag">Paper</a>
-      <a href="/projects/neighbor-hop" class="tag">Interactive Explainer</a>
+      <span class="tag">Interactive Explainer</span>
     </div>
-  </div>
+  </a>
 
 </div>
 
@@ -228,6 +227,12 @@ h2 {
   border-radius: 8px;
   padding: 1.25rem;
   transition: border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+a.project-item--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .project-item.card:hover {

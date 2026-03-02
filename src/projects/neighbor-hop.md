@@ -370,7 +370,7 @@ invalidation.then(() => cleanup());
     max-height: 42vh;
     z-index: 10;
     background: var(--theme-background, #fff);
-    padding: 0.75rem 0;
+    padding: 2.5rem 0 0.75rem;
     border-bottom: 1px solid #e5e7eb;
   }
   .scrolly-graphic__inner {
