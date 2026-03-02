@@ -3,6 +3,11 @@ title: Aviral Chawla
 toc: false
 ---
 
+```js
+const cvUrl = await FileAttachment("data/CV-Chawla.pdf").url();
+document.getElementById("cv-link").href = cvUrl;
+```
+
 <div class="hero">
   <div class="hero-text">
     <h1>Hi, I'm Aviral Chawla <span class="wave">👋</span></h1>
@@ -15,7 +20,7 @@ toc: false
     <div class="social-links">
       <a href="https://github.com/aviralchawla" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://scholar.google.com/citations?user=vt1Pq1IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      <a href="/data/CV-Chawla.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      <a id="cv-link" target="_blank" rel="noopener noreferrer">CV</a>
       <span class="email">achawla1 (at) uvm (dot) edu</span>
     </div>
   </div>
