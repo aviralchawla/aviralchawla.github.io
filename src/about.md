@@ -4,7 +4,7 @@ toc: false
 ---
 
 <div class="about-hero">
-  <img src="/photos/solo_in_copenhagen.jpeg" alt="Aviral Chawla in Nyhavn, Copenhagen" class="about-image">
+  <img src="/photos/hackathon.jpg" alt="Aviral Chawla in a group hackathon" class="about-image">
 </div>
 
 <div class="about-content">
